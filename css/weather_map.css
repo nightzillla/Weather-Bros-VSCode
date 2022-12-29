@@ -8,7 +8,7 @@
 /* CUSTOM FONT */
 @font-face {
     font-family: superSmash;
-    src: url("/fonts/super-smash-bros.ttf") ;
+    src: url("../fonts/super-smash-bros.ttf") ;
 }
 #current-city {
     font-family: superSmash,sans-serif;
