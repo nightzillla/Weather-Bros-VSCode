@@ -52,7 +52,7 @@ $(function() {
             if (i % 8 === 0) {
                 $(`.forecast`).append(`
                     <div class="card weatherCards">                   
-                    <img class="icon card-img-top" src="http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png"  alt="Card image cap" style="height: 90px; width: 90px; margin: auto"> 
+                    <img class="icon card-img-top" src="https://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png"  alt="Card image cap" style="height: 90px; width: 90px; margin: auto"> 
                     <p class="temp">The current temperature is ${data.list[i].main.temp}</p>
                     <p class="description">Description: ${data.list[i].weather[0].description}</p>                
                     <p class="wind">Wind Speed: ${data.list[i].wind.speed} ${windCardinalDirection(data.list[i].wind.deg)}</p> 
@@ -124,7 +124,7 @@ $(function() {
         console.log("inside updateWeather");
         console.log(coordinates[0]); // lon
         console.log(coordinates[1]); // lat
-        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        $.get("https://api.openweathermap.org/data/2.5/forecast", {
             APPID: OPEN_WEATHER_APPID,
             lat: coordinates[1],
             lon: coordinates[0],
@@ -135,14 +135,14 @@ $(function() {
             printWeather(data);
         });
     }
-        $.get("http://api.openweathermap.org/data/2.5/weather", {
+        $.get("https://api.openweathermap.org/data/2.5/weather", {
             APPID: OPEN_WEATHER_APPID,
             lat: 29.423017,
             lon: -98.48527,
             units: "imperial"
         }).done(function (data) {
         });
-        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        $.get("https://api.openweathermap.org/data/2.5/forecast", {
             APPID: OPEN_WEATHER_APPID,
             lat:    29.423017,
             lon:   -98.48527,
